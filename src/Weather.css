@@ -5,3 +5,18 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.Weather .coded-by {
+  text-align: right;
+  width: 1180px;
+}
+.Weather .github-link {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: none;
+}
+.Weather .github-link:hover {
+  color: rgb(45, 51, 87);
+}

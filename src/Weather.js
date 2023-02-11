@@ -4,14 +4,24 @@ import "./Weather.css";
 
 import TodayWeather from "./TodayWeather";
 import Forecast from "./Forecast";
-import CodedBy from "./CodedBy";
 
 export default function Weather() {
   return (
     <div className="Weather">
       <TodayWeather />
       <Forecast />
-      <CodedBy />
+      <footer className="coded-by">
+        <a
+          href="https://github.com/NinjaGexly/react-weather-homework"
+          target="_blank"
+          rel="noreferrer"
+          class="github-link"
+        >
+          {" "}
+          Open-source code
+        </a>{" "}
+        <span>by Kristina Bekher</span>
+      </footer>
     </div>
   );
 }
