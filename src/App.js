@@ -1,7 +1,8 @@
 import "./App.css";
-import Weather from "./Weather";
-import Search from "./Search";
+
 import background from "./img/Bg.jpg";
+
+import Weather from "./Weather";
 
 function App() {
   return (
@@ -17,7 +18,6 @@ function App() {
       className="App"
     >
       <div className="container">
-        <Search />
         <Weather />
       </div>
     </div>

@@ -1,0 +1,96 @@
+.MainInfo {
+  position: relative;
+  background-color: rgba(217, 217, 217, 0.07);
+  border-radius: 8px;
+  height: 361px;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.MainInfo .text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.MainInfo .image-section {
+  width: 350px;
+  padding-top: 40px;
+  text-align: center;
+}
+.MainInfo .city {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41px;
+}
+.MainInfo .current-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 8px;
+}
+.MainInfo .temperature-section {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  gap: 4px;
+  width: 350px;
+}
+.MainInfo .temperature-section .temperature {
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 94px;
+  height: 91px;
+  min-width: 130px;
+}
+.MainInfo .scale-switcher {
+  width: 156px;
+  height: 91px;
+  border-radius: 8px;
+  background-color: rgba(217, 217, 217, 0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.MainInfo .scale {
+  text-align: center;
+  width: 77px;
+}
+.MainInfo .scale-link {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  text-decoration: none;
+}
+.MainInfo .scale-link:hover {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: unset;
+}
+
+.MainInfo .turned-off {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+.turned-off .scale-link {
+  color: #fffffe;
+  font-weight: 500;
+}
+.MainInfo .turned-off .scale-link:hover {
+  cursor: pointer;
+}
+
+.MainInfo .description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 290px;
+}
+
+.MainInfo .description::first-letter {
+  text-transform: uppercase;
+}
