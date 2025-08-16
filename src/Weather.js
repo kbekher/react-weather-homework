@@ -15,11 +15,10 @@ export default function Weather() {
           href="https://github.com/kbekher/react-weather-homework"
           target="_blank"
           rel="noreferrer"
-          class="github-link"
+          className="github-link"
         >
-          {" "}
           Open-source code
-        </a>{" "}
+        </a>
         <span>by Kristina Bekher</span>
       </footer>
     </div>
