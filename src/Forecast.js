@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Forecast.css";
 
-import WeekDay from "./WeekDay";
+import WeekDay from "./WeekDay.js";
 
 import aImg from "./img/01d.png";
 import anImg from "./img/01n.png";
