@@ -2,9 +2,9 @@ import React from "react";
 
 import "./TodayWeather.css";
 
-import SearchEngine from "./SearchEngine";
-import MainInfo from "./MainInfo";
-import Properties from "./Properties";
+import SearchEngine from "./SearchEngine.js";
+import MainInfo from "./MainInfo.js";
+import Properties from "./Properties.js";
 
 export default function TodayWeather() {
   return (

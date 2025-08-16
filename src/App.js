@@ -2,7 +2,7 @@ import "./App.css";
 
 import background from "./img/Bg.jpg";
 
-import Weather from "./Weather";
+import Weather from "./Weather.js";
 
 function App() {
   return (

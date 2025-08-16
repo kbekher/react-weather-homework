@@ -2,9 +2,9 @@ import React from "react";
 
 import "./Properties.css";
 
-import Wind from "./Wind";
-import Humidity from "./Humidity";
-import Pressure from "./Pressure";
+import Wind from "./Wind.js";
+import Humidity from "./Humidity.js";
+import Pressure from "./Pressure.js";
 
 export default function Properties(props) {
   return (

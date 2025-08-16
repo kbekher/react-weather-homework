@@ -2,8 +2,8 @@ import React from "react";
 
 import "./Weather.css";
 
-import TodayWeather from "./TodayWeather";
-import Forecast from "./Forecast";
+import TodayWeather from "./TodayWeather.js";
+import Forecast from "./Forecast.js";
 
 export default function Weather() {
   return (
