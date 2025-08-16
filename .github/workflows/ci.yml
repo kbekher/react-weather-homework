@@ -31,5 +31,11 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Audit dependencies
+        run: npm run audit
+
+      - name: Check for dependency updates
+        run: npm run check-updates
+
       - name: Build
         run: npm run build
