@@ -1,7 +1,11 @@
 # GitHub Actions Workflow for React Weather Homework
 # This workflow installs dependencies, runs tests, and builds the app on push and pull request events.
 
+
 name: CI
+
+env:
+  NODE_VERSION: '21'
 
 on:
   push:
@@ -10,32 +14,73 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
-
+          node-version: ${{ env.NODE_VERSION }}
       - name: Install dependencies
         run: npm ci
-
       - name: Lint
         run: npm run lint
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
       - name: Test
         run: npm test
 
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
       - name: Audit dependencies
         run: npm run audit
 
+  check-updates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
       - name: Check for dependency updates
         run: npm run check-updates
 
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, test, audit, check-updates]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
       - name: Build
         run: npm run build
