@@ -28,7 +28,7 @@ jobs:
       - name: Install ESLint
         run: npm install eslint --no-save
       - name: Lint
-        run: npm run lint
+        run: npx eslint --config eslint.config.js .
 
   test:
     runs-on: ubuntu-latest
@@ -44,9 +44,9 @@ jobs:
       - name: Install ESLint
         run: npm install eslint --no-save
       - name: Lint
-        run: npm run lint
-      - name: Test
-        run: npm test
+        run: npx eslint --config eslint.config.js .
+      - name: Test (Node.js only)
+        run: node --test
 
   audit:
     runs-on: ubuntu-latest
