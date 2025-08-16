@@ -12,7 +12,7 @@ export default function Weather() {
       <Forecast />
       <footer className="coded-by">
         <a
-          href="https://github.com/NinjaGexly/react-weather-homework"
+          href="https://github.com/kbekher/react-weather-homework"
           target="_blank"
           rel="noreferrer"
           class="github-link"
